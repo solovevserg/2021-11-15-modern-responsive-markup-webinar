@@ -11,6 +11,10 @@ by [Sergei Solovev](http://sergsol.ru/)
 - CSS Custom props
 - CSS анимаций и трансформаций
 
+## Как запустить
+- выкачать репозиторий
+- запустить сервер в папке проекта
+
 ## Основные ресурсы
 
 - [Презентация](https://docs.google.com/presentation/d/1YcYVldEhoFGQud6aV5tTBgtJWThTNBUp/edit#slide=id.g101c3aeb9ed_3_0) к вебинару
@@ -56,3 +60,8 @@ by [Sergei Solovev](http://sergsol.ru/)
 
 ## Скриншот результата
 ![Скриншот результата](/src/img/screenshot.png)
+
+Спасибо за помощь в проведении вебинара:
+- Алексею Кривенко (презентация)
+- Луизе Шаиповой (презентация)
+- Дмитрию Капсомуну (CSS код)
