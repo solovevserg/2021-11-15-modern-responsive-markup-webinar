@@ -1,0 +1,245 @@
+/* BEM Notation Example
+*
+*      👇 вложенность
+* .menu__items--selected { ... } 
+*             👆 состояние
+*
+*/
+
+/* Global Variables */
+/* Цвета, размеры шрифтов, радиусы, отступы */
+:root {
+  /* Цвета и градиенты */
+  --color-bg: #ffffff;
+  --color-bg-alt: #ffede9;
+
+  --color-title: #0a004a;
+  --color-text: #8b8b8b;
+  --color-button: #210095;
+
+  --color-accent-1: #613fb7;
+  --color-accent-2: #fa7279;
+  --color-accent-3: #ffcb5b;
+
+  --color-additional-1: #d1fbf7;
+  --color-additional-2: #828ce4;
+
+  /* Типографика */
+  --font-size-body: 18px;
+  --font-size-h1: 64px;
+  --font-size-h2: 48px;
+  --font-size-h3: 24px;
+  --font-size-button: 18px;
+  --font-size-caption: 12px;
+
+  /* Отступы */
+  --indent: 25px;
+  --content-max-width: 1200px;
+
+  /* Геометрия */
+  --radius: 10px;
+
+  /* Анимация */
+  --transition: 0.25s ease-in-out;
+}
+
+:root .mobile {
+  --indent: 10px;
+  --font-size-body: 14px;
+  --font-size-h1: 48px;
+  --font-size-h2: 36px;
+  --font-size-h3: 18px;
+  --font-size-button: 14px;
+  --font-size-caption: 10px;
+}
+
+/* Typography */
+/* Шрифтовые семьи, размер шрифта, начертания и интерлиньяж */
+
+h1,
+.h1-like {
+  color: var(--color-title);
+  font-size: var(--font-size-h1);
+  font-weight: 700;
+  line-height: 110%;
+}
+
+h2,
+.h2-like {
+  color: var(--color-title);
+  font-size: var(--font-size-h2);
+  font-weight: 700;
+  line-height: 140%;
+}
+
+h3,
+.h3-like {
+  color: var(--color-title);
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.font--caption {
+  font-size: var(--font-size-caption);
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.font--button {
+  font-size: var(--font-size);
+  font-weight: 700;
+  line-height: 150%;
+}
+
+/* UI Kit */
+
+button,
+.button-like {
+  display: inline-block;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--color-button);
+  color: var(--color-bg);
+  padding: var(--indent);
+  font-size: var(--font-size-button);
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  color: var(--color-bg);
+  transition: var(--transition);
+}
+
+button:hover,
+.button-like:hover {
+  transform: scale(.96);
+}
+
+button:active,
+.button-like:active {
+  transform: scale(.94);
+  background-color: var(--color-title);  
+}
+
+
+p {
+  max-width: 16em;
+}
+
+a,
+.a-like {
+}
+
+/* Service styles */
+/* Служебные классы для лейаута и сокрытия элементов */
+
+.container {
+  max-width: var(--content-max-width);
+  width: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0 calc(var(--indent) * 2);
+}
+
+.mobile .split-layout {
+  flex-direction: column;
+}
+.split-layout {
+  display: flex;
+}
+.split-layout > * {
+  flex: 1;
+}
+
+.mobile .only--desktop {
+  display: none;
+}
+
+.desktop .only--mobile {
+  display: none;
+}
+
+/* Global Definitions */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+}
+
+/* 
+*   _____ ______ _____ _______ _____ ____  _   _  _____ 
+*  / ____|  ____/ ____|__   __|_   _/ __ \| \ | |/ ____|
+* | (___ | |__ | |       | |    | || |  | |  \| | (___  
+*  \___ \|  __|| |       | |    | || |  | | . ` |\___ \ 
+*  ____) | |___| |____   | |   _| || |__| | |\  |____) |
+* |_____/|______\_____|  |_|  |_____\____/|_| \_|_____/ 
+* 
+*/
+
+/* Navigation */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: background var(--transition);
+  padding: calc(var(--indent) / 3);
+  z-index: 1000;
+}
+
+nav.nav--scrolled {
+  background: var(--color-bg-alt);
+}
+
+nav menu {
+  display: flex;
+  margin: 0;
+}
+
+nav .nav__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .nav__items .logo {
+  margin-right: auto;
+}
+
+nav menu li {
+  padding: var(--indent);
+  display: block;
+}
+
+nav menu li a {
+  text-decoration: none;
+  color: var(--color-title);
+}
+
+/* Welcome */
+
+section#welcome {
+  height: 100vh;
+  display: flex;
+  background: var(--color-bg-alt);
+}
+
+section#welcome .container {
+  height: 100%;
+  align-items: center;
+}
+
+section#welcome .welcome__illustration {
+  height: 100%;
+  position: relative;
+}
+
+section#welcome .welcome__illustration .welcome__illustration__img {
+  position: absolute;
+  bottom: 0;  
+}
