@@ -1,7 +1,8 @@
 # modern-responsive-markup-webinar
 by [Sergei Solovev](http://sergsol.ru/)
 
-Вебинар проведен 15 ноября 2021 года для студентов МГТУ и сотрудников [Qoollo](https://qoollo.com/)
+Вебинар проведен 15 ноября 2021 года для студентов ИУ7 МГТУ и сотрудников [Qoollo](https://qoollo.com/)
+
 ## О чем
 
 Содержание вебинара
@@ -9,14 +10,17 @@ by [Sergei Solovev](http://sergsol.ru/)
 - практическая часть с версткой
 
 ## Что вы найдете в репозитории
-В этом репозитории вы найдёте примеры
+В этом репозитории вы найдёте пример использования адаптивной вестки с использованием
 - семантической верстки
 - BEM-именования классов
 - CSS Flexbox
-- CSS 
+- CSS Custom props
+- CSS анимаций и трансформаций
 
 ## Основные ресурсы
 
+- [Презентация](https://docs.google.com/presentation/d/1YcYVldEhoFGQud6aV5tTBgtJWThTNBUp/edit#slide=id.g101c3aeb9ed_3_0) к вебинару
+- [Временная ссылка](https://drive.google.com/drive/folders/1IlUrJlxMSOuW5iqCftOhsX3fehw_Poih) на видео-записи этого и прошлого вебинара
 - [Исходный макет](https://www.uihut.com/web-designs/besnik-online-learning-landing-page/8066)
 - [Репозиторий с кодом](https://github.com/solovevserg/2021-11-15-modern-responsive-markup-webinar)
 - [Фигма проекта](https://www.figma.com/file/1JVnJjEybLJc2kzT99lixD/Responseve-Markup-Webinar-by-Sergei-Solovev?node-id=0%3A1)
@@ -29,15 +33,10 @@ by [Sergei Solovev](http://sergsol.ru/)
 - Источники референсов (примеров дизайна) [Behance](https://www.behance.net/), [Pinterest](https://www.pinterest.com/)
 - Инструменты [VS Code](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer), расширение [LiveServer](https://code.visualstudio.com/)
 - Коллаборативный инструмент для макетирования [Figma](https://figma.com/)
-
-
-[Ссылка на репозиторий с кодом]()
-[Ссылка на репозиторий с кодом]()
-[Ссылка на репозиторий с кодом]()
-
+- Библиотека бесплатных [шрифтов](https://fonts.google.com) и [иконок](https://fonts.google.com/icons) от Google, которые легко подключаются через [CDN](https://developers.google.com/fonts/docs/css2)
 
 ## Универсальный алгоритм верстки
-Тут изложена многолетняя мудрость
+Тут изложена многолетняя мудрость, накопленная с практическим опытом и курением мануалов
 
 ### Предварительный этап
 Необходимо получить от дизайнера или подготовить самому макет для верстки. Макет должен включать:
@@ -54,10 +53,13 @@ by [Sergei Solovev](http://sergsol.ru/)
 - Стилизовать основные компоненты UI-Kit (заголовки, абзацы, ссылки, кнопки, поля ввода)
 - проанализировать структуру, выбрать способ релаизации лейаута (позиционирования на верхнем уровне дерева HTML)
 - Задать адаптивный лейаут
-- добавить классы mobile, desktop, tablet, ...
+- Добавить механизм назначения динамических классов на основе размера вьюпорта (например, `mobile`, `desktop`)
 ### Основной этап
 Удобнее всего разбить сайт/приложение на экраны и секции и для каждой выполнить набор действий:
-- воспроизвести структуру контента в соотв. с макетом
+- воспроизвести структуру контента в соотв. с макетом в HTML
+- именовать элементы в соответствии с именами компонентов в макете и BEM
 - добавить стили
 - дожать адаптивность (от мобилки до телевизора)
-- 
+
+## Скриншот результата
+![Скриншот результата](/src/img/screenshot.png)
