@@ -1,0 +1,316 @@
+/* BEM Notation Example
+*
+*             👇 вложенность
+* .orders-list__list-item--selected { ... } 
+*                         👆 состояние
+*
+*/
+
+/* Global Variables */
+/* Цвета, размеры шрифтов, радиусы, отступы */
+:root {
+  /* Цвета и градиенты */
+  --color-bg: #ffffff;
+  --color-bg-alt: #ffede9;
+
+  --color-title: #0a004a;
+  --color-text: #8b8b8b;
+  --color-button: #210095;
+
+  --color-accent-1: #613fb7;
+  --color-accent-2: #fa7279;
+  --color-accent-3: #ffcb5b;
+
+  --color-additional-1: #d1fbf7;
+  --color-additional-2: #828ce4;
+
+  /* Типографика */
+  --font-size-body: 18px;
+  --font-size-h1: 64px;
+  --font-size-h2: 48px;
+  --font-size-h3: 24px;
+  --font-size-button: 18px;
+  --font-size-caption: 12px;
+
+  /* Отступы */
+  --indent: 25px;
+  --content-max-width: 1200px;
+
+  /* Геометрия */
+  --radius: 10px;
+
+  /* Анимация */
+  --transition: 0.25s ease-in-out;
+}
+
+:root .mobile {
+  --indent: 10px;
+  --font-size-body: 14px;
+  --font-size-h1: 48px;
+  --font-size-h2: 36px;
+  --font-size-h3: 18px;
+  --font-size-button: 14px;
+  --font-size-caption: 10px;
+}
+
+/* Typography */
+/* Шрифтовые семьи, размер шрифта, начертания и интерлиньяж */
+
+h1,
+.h1-like {
+  color: var(--color-title);
+  font-size: var(--font-size-h1);
+  font-weight: 700;
+  line-height: 110%;
+}
+
+h2,
+.h2-like {
+  color: var(--color-title);
+  font-size: var(--font-size-h2);
+  font-weight: 700;
+  line-height: 140%;
+}
+
+h3,
+.h3-like {
+  color: var(--color-title);
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.font--caption {
+  font-size: var(--font-size-caption);
+  font-weight: 700;
+  line-height: 150%;
+}
+
+/* UI Kit */
+
+button,
+.button-like {
+  display: inline-block;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--color-button);
+  color: var(--color-bg);
+  padding: var(--indent);
+  font-size: var(--font-size-button);
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  color: var(--color-bg);
+  transition: var(--transition);
+}
+
+button:hover,
+.button-like:hover {
+  transform: scale(.96);
+}
+
+button:active,
+.button-like:active {
+  transform: scale(.94);
+  background-color: var(--color-title);  
+}
+
+p {
+  max-width: 16em;
+}
+
+a,
+.a-like {
+}
+
+
+/* Service Styles */
+
+.mobile .only--desktop {
+  display: none !important;
+}
+
+.desktop .only--mobile {
+  display: none !important;
+}
+
+.container {
+  max-width: var(--content-max-width);
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 calc(var(--indent) * 2);
+}
+
+.split-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.mobile .split-layout {
+  flex-direction: column;
+}
+
+.split-layout > * {
+  flex: 1;
+}
+
+/* Global Overrides */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+  line-height: 200%;
+  font-weight: 600;
+  scroll-behavior: smooth;
+}
+
+/* 
+*   _____ ______ _____ _______ _____ ____  _   _  _____ 
+*  / ____|  ____/ ____|__   __|_   _/ __ \| \ | |/ ____|
+* | (___ | |__ | |       | |    | || |  | |  \| | (___  
+*  \___ \|  __|| |       | |    | || |  | | . ` |\___ \ 
+*  ____) | |___| |____   | |   _| || |__| | |\  |____) |
+* |_____/|______\_____|  |_|  |_____\____/|_| \_|_____/ 
+* 
+*/
+
+section {
+  padding: calc(var(--indent) * 4) 0;
+}
+
+/* Navigation */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: calc(var(--indent) / 3) 0;
+  transition: var(--transition);
+}
+
+header > nav {
+  display: flex;
+}
+
+header.nav--scrolled {
+  background: var(--color-bg-alt);
+}
+
+header > nav > .logo {
+  margin-right: auto;
+  color: var(--color-button);
+}
+
+header > nav > menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header > nav > menu > li {
+  display: block;
+  padding: var(--indent);
+}
+
+header > nav > menu > li > a {
+  text-decoration: none;
+  color: var(--color-title);
+}
+
+/* Welcome */
+
+section#welcome {
+  height: 100vh;
+  box-sizing: border-box;
+  background: var(--color-bg-alt);
+}
+
+section#welcome .container {
+  align-items: stretch;
+  height: 100%;
+}
+
+section#welcome .welcome__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+section#welcome .welcome__content .welcome__content__cta {
+  color: var(--color-button);
+}
+
+section#welcome .welcome__content .welcome__content__description {
+  width: 16em;
+}
+
+section#welcome .welcome__illustration {
+  position: relative;
+}
+
+section#welcome .welcome__illustration .welcome__illustration__img {
+  position: absolute;
+  bottom: calc(var(--indent) * -4);
+}
+
+/* Services */
+
+section#services {
+  text-align: center;
+}
+
+section#services .services__cards {
+  margin-top: calc(var(--indent) * 4);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--indent);
+}
+
+.mobile section#services .services__cards {
+  flex-direction: column;
+  align-items: center;
+}
+
+section#services .services__cards .services__cards__card {
+  width: 250px;
+}
+
+/* @media (max-width: 1200px) {
+    html {
+        background-color: red;
+    }
+} */
+
+section#services
+  .services__cards
+  .services__cards__card
+  .services__cards__card__icon {
+  background: var(--color-accent-1);
+  border-radius: var(--radius);
+  width: 90px;
+  height: 90px;
+  color: var(--color-bg);
+  vertical-align: middle;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#services
+  .services__cards
+  .services__cards__card
+  .services__cards__card__icon
+  span {
+  font-size: 64px !important;
+}
