@@ -3,12 +3,6 @@ by [Sergei Solovev](http://sergsol.ru/)
 
 Вебинар проведен 15 ноября 2021 года для студентов ИУ7 МГТУ и сотрудников [Qoollo](https://qoollo.com/)
 
-## О чем
-
-Содержание вебинара
-- презенатция по основным технологиям HTML/CSS верстки
-- практическая часть с версткой
-
 ## Что вы найдете в репозитории
 В этом репозитории вы найдёте пример использования адаптивной вестки с использованием
 - семантической верстки
@@ -21,19 +15,18 @@ by [Sergei Solovev](http://sergsol.ru/)
 
 - [Презентация](https://docs.google.com/presentation/d/1YcYVldEhoFGQud6aV5tTBgtJWThTNBUp/edit#slide=id.g101c3aeb9ed_3_0) к вебинару
 - [Временная ссылка](https://drive.google.com/drive/folders/1IlUrJlxMSOuW5iqCftOhsX3fehw_Poih) на видео-записи этого и прошлого вебинара
-- [Исходный макет](https://www.uihut.com/web-designs/besnik-online-learning-landing-page/8066)
+- [Исходный макет](https://www.uihut.com/web-designs/besnik-online-learning-landing-page/8066) по которому верстали сайт
+- [Фигма проекта](https://www.figma.com/file/1JVnJjEybLJc2kzT99lixD/Responseve-Markup-Webinar-by-Sergei-Solovev?node-id=0%3A1), где я кропотливо отрисовал в компонентах картинку с макетом
 - [Репозиторий с кодом](https://github.com/solovevserg/2021-11-15-modern-responsive-markup-webinar)
-- [Фигма проекта](https://www.figma.com/file/1JVnJjEybLJc2kzT99lixD/Responseve-Markup-Webinar-by-Sergei-Solovev?node-id=0%3A1)
 
 ## Полезные ссылки
-
 - Источники бесплатных профессиональных фотографий [Unsplash](https://unsplash.com/) и [Pexels](https://www.pexels.com/ru-ru/).
 - Источник PNG без фона [PngEgg](https://www.pngegg.com/)
-- Фотки [людей](https://thispersondoesnotexist.com/) и [не только](https://thisxdoesnotexist.com/), которые для вас в любых количествах генерит нейросетка. Я залип на полчаса и славно поорал.
+- Библиотека бесплатных [шрифтов](https://fonts.google.com) и [иконок](https://fonts.google.com/icons) от Google, которые легко подключаются через [CDN](https://developers.google.com/fonts/docs/css2)
+- Фотки [людей](https://thispersondoesnotexist.com/) и [не только](https://thisxdoesnotexist.com/), которые для вас в любых количествах генерит нейросетка. Я залип на полчаса и славно поорал с некоторых шедевров.
 - Источники референсов (примеров дизайна) [Behance](https://www.behance.net/), [Pinterest](https://www.pinterest.com/)
 - Инструменты [VS Code](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer), расширение [LiveServer](https://code.visualstudio.com/)
 - Коллаборативный инструмент для макетирования [Figma](https://figma.com/)
-- Библиотека бесплатных [шрифтов](https://fonts.google.com) и [иконок](https://fonts.google.com/icons) от Google, которые легко подключаются через [CDN](https://developers.google.com/fonts/docs/css2)
 
 ## Универсальный алгоритм верстки
 Тут изложена многолетняя мудрость, накопленная с практическим опытом и курением мануалов
