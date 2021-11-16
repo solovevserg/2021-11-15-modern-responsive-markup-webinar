@@ -22,49 +22,60 @@
 /* Global Variables */
 /* Цвета, размеры шрифтов, радиусы, отступы. Тут присутствуют только декларации, их использование ищи в Global Overrides */
 :root {
-  /* Цвета и градиенты */
-  --color-bg: #ffffff;
-  --color-bg-alt: #ffede9;
+    /* Цвета и градиенты */
+    --color-bg: #ffffff;
+    --color-bg-alt: #ffede9;
 
-  --color-title: #0a004a;
-  --color-text: #8b8b8b;
-  --color-button: #210095;
+    --color-title: #0a004a;
+    --color-text: #8b8b8b;
+    --color-button: #210095;
 
-  --color-accent-1: #613fb7;
-  --color-accent-2: #fa7279;
-  --color-accent-3: #ffcb5b;
+    --color-accent-1: #613fb7;
+    --color-accent-2: #fa7279;
+    --color-accent-3: #ffcb5b;
 
-  --color-additional-1: #d1fbf7;
-  --color-additional-2: #828ce4;
+    --color-additional-1: #d1fbf7;
+    --color-additional-2: #828ce4;
 
-  /* Типографика */
-  --font-size-body: 18px;
-  --font-size-h1: 64px;
-  --font-size-h2: 48px;
-  --font-size-h3: 24px;
-  --font-size-button: 18px;
-  --font-size-caption: 12px;
+    /* Типографика */
+    --font-size-body: 18px;
+    --font-size-h1: 64px;
+    --font-size-h2: 48px;
+    --font-size-h3: 24px;
+    --font-size-button: 18px;
+    --font-size-caption: 12px;
 
-  /* Отступы */
-  --indent: 25px;
-  --content-max-width: 1200px;
+    /* Отступы */
+    --indent: 25px;
+    --header-indent: 25px;
+    --content-max-width: 1200px;
 
-  /* Геометрия */
-  --radius: 10px;
+    /* Геометрия */
+    --radius: 10px;
 
-  /* Анимация */
-  --transition: 0.25s ease-in-out;
+    /* Анимация */
+    --transition: 0.25s ease-in-out;
 }
 
 :root .mobile {
-  /* Пример: переопределение CSS-свойства --indent для поддерева html с корнем в элементе .mobile */
-  --indent: 10px;
-  --font-size-body: 14px;
-  --font-size-h1: 48px;
-  --font-size-h2: 36px;
-  --font-size-h3: 18px;
-  --font-size-button: 14px;
-  --font-size-caption: 10px;
+    /* Пример: переопределение CSS-свойства --indent для поддерева html с корнем в элементе .mobile */
+    --indent: 10px;
+    --font-size-body: 14px;
+    --font-size-h1: 48px;
+    --font-size-h2: 36px;
+    --font-size-h3: 18px;
+    --font-size-button: 14px;
+    --font-size-caption: 10px;
+}
+
+:root .tablet {
+    --indent: 15px;
+    --font-size-body: 16px;
+    --font-size-h1: 58px;
+    --font-size-h2: 44px;
+    --font-size-h3: 20px;
+    --font-size-button: 16px;
+    --font-size-caption: 12px;
 }
 
 /* Typography */
@@ -73,32 +84,32 @@
 h1,
 /* Пример: добавление селектора xxx-like позволяет эффективнее переиспользовать определения стилей */
 .h1-like {
-  color: var(--color-title);
-  font-size: var(--font-size-h1);
-  font-weight: 700;
-  line-height: 110%;
+    color: var(--color-title);
+    font-size: var(--font-size-h1);
+    font-weight: 700;
+    line-height: 110%;
 }
 
 h2,
 .h2-like {
-  color: var(--color-title);
-  font-size: var(--font-size-h2);
-  font-weight: 700;
-  line-height: 140%;
+    color: var(--color-title);
+    font-size: var(--font-size-h2);
+    font-weight: 700;
+    line-height: 140%;
 }
 
 h3,
 .h3-like {
-  color: var(--color-title);
-  font-size: var(--font-size-h3);
-  font-weight: 700;
-  line-height: 150%;
+    color: var(--color-title);
+    font-size: var(--font-size-h3);
+    font-weight: 700;
+    line-height: 150%;
 }
 
 .font--caption {
-  font-size: var(--font-size-caption);
-  font-weight: 700;
-  line-height: 150%;
+    font-size: var(--font-size-caption);
+    font-weight: 700;
+    line-height: 150%;
 }
 
 /* UI Kit */
@@ -106,34 +117,44 @@ h3,
 
 button,
 .button-like {
-  display: inline-block;
-  border: none;
-  border-radius: var(--radius);
-  background: var(--color-button);
-  color: var(--color-bg);
-  padding: var(--indent);
-  font-size: var(--font-size-button);
-  cursor: pointer;
-  user-select: none;
-  text-decoration: none;
-  color: var(--color-bg);
-  /* Пример: использование плавного перехода при наведении и нажатии на кнопку */
-  transition: var(--transition);
+    display: inline-block;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--color-button);
+    color: var(--color-bg);
+    padding: var(--indent);
+    font-size: var(--font-size-button);
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    color: var(--color-bg);
+    /* Пример: использование плавного перехода при наведении и нажатии на кнопку */
+    transition: var(--transition);
+}
+
+select,
+.select-like {
+    display: inline-block;
+    border: none;
+    background-color: var(--color-bg-alt);
+    font-size: var(--font-size-button);
+    color: var(--color-title);
+    font-weight: 600;
 }
 
 button:hover,
 .button-like:hover {
-  /* Пример: трансформация позволяет изменить размер кнопки после её полной отрисовки  */
-  transform: scale(0.96);
+    /* Пример: трансформация позволяет изменить размер кнопки после её полной отрисовки  */
+    transform: scale(0.96);
 }
 
 button:active,
 .button-like:active {
-  transform: scale(0.94);
-  background-color: var(--color-title);
+    transform: scale(0.94);
+    background-color: var(--color-title);
 }
 z p {
-  max-width: 16em;
+    max-width: 16em;
 }
 
 a,
@@ -142,34 +163,54 @@ a,
 
 /* Service Styles */
 /* Служебные классы для лейаута и сокрытия элементов */
+/* Многие селекторы не используются */
 
-.mobile .only--desktop {
-  display: none !important;
+.mobile .only--desktop,
+.tablet .only--desktop {
+    display: none !important;
 }
 
+.tablet .only--mobile,
 .desktop .only--mobile {
-  display: none !important;
+    display: none !important;
+}
+
+.mobile .only--tablet,
+.desktop .only--tablet {
+    display: none !important;
+}
+
+.desktop .not--desktop {
+    display: none !important;
+}
+
+.tablet .not--tablet {
+    display: none !important;
+}
+
+.mobile .not--mobile {
+    display: none !important;
 }
 
 .container {
-  max-width: var(--content-max-width);
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 calc(var(--indent) * 2);
+    max-width: var(--content-max-width);
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 calc(var(--indent) * 2);
 }
 
 .split-layout {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .mobile .split-layout {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .split-layout > * {
-  flex: 1;
+    flex: 1;
 }
 
 /* Global Overrides */
@@ -177,14 +218,14 @@ a,
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  font-size: var(--font-size-body);
-  color: var(--color-text);
-  line-height: 200%;
-  font-weight: 600;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: 200%;
+    font-weight: 600;
+    scroll-behavior: smooth;
 }
 
 /* 
@@ -200,142 +241,142 @@ body {
 */
 
 section {
-  padding: calc(var(--indent) * 4) 0;
+    padding: calc(var(--indent) * 4) 0;
 }
 
 /* Navigation */
 
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: calc(var(--indent) / 3) 0;
-  transition: var(--transition);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: calc(var(--header-indent) / 3) 0;
+    transition: var(--transition);
 }
 
 header > nav {
-  display: flex;
+    display: flex;
 }
 
 header.nav--scrolled {
-  background: var(--color-bg-alt);
+    background: var(--color-bg-alt);
 }
 
 header > nav > .logo {
-  margin-right: auto;
-  color: var(--color-button);
+    margin-right: auto;
+    color: var(--color-button);
 }
 
 header > nav > menu {
-  margin: 0;
-  padding: 0;
-  display: flex;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 header > nav > menu > li {
-  display: block;
-  padding: var(--indent);
+    display: block;
+    padding: var(--header-indent);
 }
 
 header > nav > menu > li > a {
-  text-decoration: none;
-  color: var(--color-title);
+    text-decoration: none;
+    color: var(--color-title);
 }
 
 /* Welcome */
 
 section#welcome {
-  height: 100vh;
-  box-sizing: border-box;
-  background: var(--color-bg-alt);
+    height: 100vh;
+    box-sizing: border-box;
+    background: var(--color-bg-alt);
 }
 
 section#welcome .container {
-  align-items: stretch;
-  height: 100%;
+    align-items: stretch;
+    height: 100%;
 }
 
 section#welcome .welcome__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
 }
 
 /* Пример: именование по БЭМ в интерпретации Сергея Соловьева */
 section#welcome .welcome__content .welcome__content__cta {
-  color: var(--color-button);
+    color: var(--color-button);
 }
 
 section#welcome .welcome__content .welcome__content__description {
-  /* Пример: использование тоносительных единиц. 1em == font-size родителя текущего элемента*/
-  width: 16em;
+    /* Пример: использование тоносительных единиц. 1em == font-size родителя текущего элемента*/
+    width: 16em;
 }
 
 section#welcome .welcome__illustration {
-  /* Пример: использование связки relative+absolute для
+    /* Пример: использование связки relative+absolute для
   вывода элемента запределы основного потока отрисовки и
   позиционирования с выходом за пределы границ родителя */
-  position: relative;
+    position: relative;
 }
 
 section#welcome .welcome__illustration .welcome__illustration__img {
-  position: absolute;
-  bottom: calc(var(--indent) * -4);
+    position: absolute;
+    bottom: calc(var(--indent) * -4);
 }
 
 /* Services */
 
 section#services {
-  text-align: center;
+    text-align: center;
 }
 
 section#services .services__cards {
-  /* Пример: использование calc для динамического вычисления значения выражения. */
-  margin-top: calc(var(--indent) * 4);
-  width: 100%;
+    /* Пример: использование calc для динамического вычисления значения выражения. */
+    margin-top: calc(var(--indent) * 4);
+    width: 100%;
 
-  /* Пример: использование Flex для раномерного распределения контента по ширине доступного пространства родительского контейнера. */
-  display: flex;
-  justify-content: space-around;
+    /* Пример: использование Flex для раномерного распределения контента по ширине доступного пространства родительского контейнера. */
+    display: flex;
+    justify-content: space-around;
 
-  /* Пример: использование gap для равномерных отступов между элементами. */
-  gap: var(--indent);
+    /* Пример: использование gap для равномерных отступов между элементами. */
+    gap: var(--indent);
 }
 
 /* Пример: использование класса .mobile для создания адаптивного поведения (перестравивается в колонку) flex-контейнера. */
 .mobile section#services .services__cards {
-  flex-direction: column;
-  align-items: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 section#services .services__cards .services__cards__card {
-  width: 250px;
+    width: 250px;
 }
 
 section#services
-  .services__cards
-  .services__cards__card
-  .services__cards__card__icon {
-  background: var(--color-accent-1);
-  border-radius: var(--radius);
-  width: 90px;
-  height: 90px;
-  color: var(--color-bg);
-  vertical-align: middle;
-  text-align: center;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    .services__cards
+    .services__cards__card
+    .services__cards__card__icon {
+    background: var(--color-accent-1);
+    border-radius: var(--radius);
+    width: 90px;
+    height: 90px;
+    color: var(--color-bg);
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section#services
-  .services__cards
-  .services__cards__card
-  .services__cards__card__icon
-  span {
-  font-size: 64px !important;
+    .services__cards
+    .services__cards__card
+    .services__cards__card__icon
+    span {
+    font-size: 64px !important;
 }
