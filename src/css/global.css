@@ -47,6 +47,7 @@
 
   /* Отступы */
   --indent: 25px;
+  --header-indent: 25px;
   --content-max-width: 1200px;
 
   /* Геометрия */
@@ -65,6 +66,16 @@
   --font-size-h3: 18px;
   --font-size-button: 14px;
   --font-size-caption: 10px;
+}
+
+:root .tablet {
+  --indent: 15px;
+  --font-size-body: 16px;
+  --font-size-h1: 58px;
+  --font-size-h2: 44px;
+  --font-size-h3: 20px;
+  --font-size-button: 16px;
+  --font-size-caption: 12px;
 }
 
 /* Typography */
@@ -121,6 +132,16 @@ button,
   transition: var(--transition);
 }
 
+select,
+.select-like {
+  display: inline-block;
+  border: none;
+  background-color: var(--color-bg-alt);
+  font-size: var(--font-size-button);
+  color: var(--color-title);
+  font-weight: 600;
+}
+
 button:hover,
 .button-like:hover {
   /* Пример: трансформация позволяет изменить размер кнопки после её полной отрисовки  */
@@ -142,12 +163,32 @@ a,
 
 /* Service Styles */
 /* Служебные классы для лейаута и сокрытия элементов */
+/* Многие селекторы не используются */
 
-.mobile .only--desktop {
+.mobile .only--desktop,
+.tablet .only--desktop {
   display: none !important;
 }
 
+.tablet .only--mobile,
 .desktop .only--mobile {
+  display: none !important;
+}
+
+.mobile .only--tablet,
+.desktop .only--tablet {
+  display: none !important;
+}
+
+.desktop .not--desktop {
+  display: none !important;
+}
+
+.tablet .not--tablet {
+  display: none !important;
+}
+
+.mobile .not--mobile {
   display: none !important;
 }
 
@@ -210,7 +251,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  padding: calc(var(--indent) / 3) 0;
+  padding: calc(var(--header-indent) / 3) 0;
   transition: var(--transition);
 }
 
@@ -235,7 +276,7 @@ header > nav > menu {
 
 header > nav > menu > li {
   display: block;
-  padding: var(--indent);
+  padding: var(--header-indent);
 }
 
 header > nav > menu > li > a {
